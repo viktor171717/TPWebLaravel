@@ -1,0 +1,2124 @@
+/*=========================
+    HEADER DESIGN
+ =========================*/
+header img{
+    height: 50px;
+    width: auto;
+}
+header {
+    user-select: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: #f8f9fa;
+    border-bottom: 5px solid #0066cc82;
+}
+
+.headerNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    margin: 0 40px;
+}
+
+.headerNav a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+
+}
+
+.headerNav a:hover {
+    transform: scale(1.05);
+}
+#menu-toggle {
+    font-size: 35px;
+    margin: 0;
+    padding: 0 10px;
+    user-select: none;
+}
+/*=========================
+    sidebar profile design
+ =========================*/
+#menu-back {
+    display: none; /* hidden until targeted */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+.menu-popup {
+    display: none;
+    top: 100px;
+    position: absolute;
+    right: 30px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    flex-direction: column;
+    width: 200px;
+    overflow: hidden;
+}
+#menu-back:target {
+    display: block;
+}
+#menu-back:target .menu-popup {
+    display: flex; /* show the popup when overlay is targeted */
+}
+.menu-popup button {
+    user-select: none;
+    background: none;
+    border: none;
+    padding: 20px 20px;
+    text-align: left;
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+}
+.menu-popup button:hover {
+    background-color: #f0f0f0;
+}
+
+.profile-button img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+/*=========================
+    Board Design
+ =========================*/
+
+
+main {
+    padding: 40px;
+    background: linear-gradient(135deg, #dcd3ed 0%, #e9e2d3 100%);
+    min-height: calc(100vh - 80px);
+        user-select: none;
+
+}
+
+
+
+/*=========================
+    Board Side Content
+ =========================*/
+
+
+
+
+.recently-viewed {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(52, 52, 52);
+    min-width: 250px;
+}
+
+.recently-viewed h1 {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    color: #333;
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 10px;
+}
+.recent-items {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 12px;
+    font-size: 16px;
+    color: rgb(143, 143, 143);
+    font-weight: 500;
+}
+.recent-items a {
+    text-decoration: none;
+    color: inherit;
+}
+.word {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.word:hover{
+    background-color: #f0f0f0;
+    color: #0066cc;
+    font-weight: 600;
+}
+
+.sideBox  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sideBox:hover {
+    background-color: #f0f0f0;
+}
+.online{
+    color : rgb(1, 181, 1);
+        font-weight: bold;
+    margin: auto;
+            font-style: italic;
+        font-size: 15px;
+
+}
+.offline{
+    color : rgb(101, 101, 101);
+        margin: auto;
+        font-style: italic;
+        font-size: 15px;
+
+}
+
+
+/*=========================
+    Board Main Content
+ =========================*/
+
+.board-main {
+    display: flex;
+}
+.board-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 20px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+.board-content h1 {
+    margin: 0 0 30px 0;
+    color: #333;
+    font-size: 28px;
+}
+#projects {
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.project-list div {
+    padding: 0;
+    font-weight: 600;
+    min-width: 200px;
+    text-align: center;
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.project-list div:hover {
+    transform: translateY(-5px);
+}
+
+.board-project {
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    padding : 20px 25px;
+    margin: 0;
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+
+}
+
+#tickets {
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 80px;
+}
+/*=========================
+    Project List Main Content
+ =========================*/
+
+#projects-title{
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+
+}
+.project-name{
+    font-size: 20px;
+    margin: 40px auto;
+    padding: 20px 40px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(51, 51, 51);
+    border-bottom: #0066cc 2px solid;
+    max-width: 600px;
+    width: fit-content;
+}
+.collab-div{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    padding: 10px;
+    border: #c2c2c2 1px solid;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+.collab-label{
+    margin: 0 0;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
+    color: #555;
+    margin: 0px;
+    cursor: pointer;
+    text-transform: capitalize !important;
+}
+.collab-label input{
+    margin: 0 10px;
+}
+
+
+ /*=========================
+    Project Tables
+ =========================*/
+.project-table {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: box-shadow 0.3s ease;
+}
+.ticket-title{
+    cursor: pointer;
+}
+.project-table:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+.project-list-middle{
+    border-left: #0066cc 2px solid;
+    border-right: #0066cc 2px solid;
+
+
+}
+.project-row td{
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+
+
+}
+.project-row td ul {
+    list-style: none;
+    padding:0;
+    text-align: center;
+}
+.project-button td{
+    text-align: center;
+    padding-top: 15px;
+}
+.project-button td button{
+    font-size: 15px;
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+    margin: 30px auto;
+    padding: 20px 30px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    border-radius: 10px;
+    max-width: 600px;
+    border: none;
+    transition: transform 0.3s ease;
+
+}
+
+
+.project-button td button:hover {
+    transform: translateY(-5px);
+
+}
+/*=========================
+    project table popup
+ =========================*/
+#add-collab-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+#add-collab-popup .popup-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+      user-select: none;
+
+
+}
+#add-collab-popup:target {
+    display: flex;
+}
+
+#add-collab-popup .popup-content a {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #333;
+}
+#add-collab-popup input{
+    width: 80%;
+    font-size: 16px;
+    padding: 5px 0;
+    border: none;
+    outline: none;
+    border-bottom: #4c4c4c 1px solid;
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+#add-collab-popup input:hover{
+
+    border-bottom: #222222 1px solid;
+    transform: scale(1.02);
+}
+#add-collab-popup button{
+    font-size: 17px;
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+    margin: 30px auto;
+    padding: 10px 30px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    border-radius: 10px;
+    border : none;
+    max-width: 600px;
+    transition: transform 0.3s ease;
+
+}
+
+#add-collab-popup button:hover {
+    transform: translateY(-5px);
+
+}
+/*=========================
+    project table header
+ =========================*/
+
+.project-head {
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+.project-head th {
+    padding: 15px 30px;
+    width: 33%;
+    text-align: center;
+}
+
+
+/*=========================
+    TICKET content
+ =========================*/
+/*
+.tickets-main {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e2d1c3 100%);
+    padding: 40px;
+    min-height: calc(100vh - 80px);
+}
+*/
+.dropdown-filter {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.dropdown-btn {
+  width: 100%;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  border-radius: 10px;
+  margin-top: 5px;
+    user-select: none;
+
+}
+
+.dropdown-content {
+    user-select: none;
+  display: none;
+  position: absolute;
+  background: white;
+  min-width: 120px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 10;
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+}
+
+.dropdown-content label {
+  display: block;
+  padding: 6px 10px;
+  cursor: pointer;
+      user-select: none;
+
+  font-size: 0.8rem;
+}
+
+.dropdown-content label:hover {
+  background: #f5f5f5;
+}
+
+.dropdown-filter:hover .dropdown-content,
+.dropdown-content:hover {
+  display: block;
+}
+
+.dropdown-filter input[type="checkbox"] {
+  margin-right: 6px;
+}
+.tickets-main h1 {
+    text-align: center;
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
+.div-new-ticket-button{
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+    text-align: center;
+    border-radius: 7px;
+    margin: 20px auto;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 1400px; /* same as .tickets-table */
+    box-sizing: border-box;
+}
+.project {
+    max-width: 600px;
+}
+.div-new-ticket-button:hover {
+    transform: translateY(-5px);
+}
+.div-new-ticket-button button{
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    padding: 5px 0;
+    border-radius: 5px;
+}
+/*=========================
+    TICKET table design
+ =========================*/
+
+.tickets-table {
+    width: 100%;
+    max-width: 1400px;
+    min-height: 180px;
+    margin: 0 auto;
+    background-color: white;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    user-select: none;
+
+}
+
+
+
+.tickets-table th {
+    padding: 18px 15px;
+    text-align: left;
+
+    font-weight: 600;
+    font-size: 15px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+.tickets-table thead tr{
+
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+
+}
+
+
+.tickets-table tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tickets-table tbody tr:hover, .tickets-table tbody tr:target {
+    background-color: #e9e4e4;
+}
+
+.tickets-table tbody tr.clickable-row {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tickets-table tbody tr.clickable-row:hover {
+    background-color: #d4d0d0;
+    transform: scale(1.01);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tickets-table td {
+    padding: 15px;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    transition: transform 0.3 ease;
+
+}
+/*=========================
+    TICKET DETAILS design
+ =========================*/
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: var(--light);
+}
+
+.ticket-detail-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+}
+
+.ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ticket-id {
+    color: #777;
+}
+
+.ticket-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.detail-section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+.add-comment {
+    display: flex;
+}
+.comment-input{
+        display: inline-block;
+    padding: 14px 35px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    border: none;
+}
+/* ====== COLONNE DROITE ====== */
+
+.ticket-right {
+    padding-left: 20px;
+}
+
+/* Bloc Etat / Priorité / Type */
+.left-infos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+/* Cartes simples (etat / priorité / type) */
+.info-card-1 > div {
+    background-color: #ffffff;
+    border: 2px solid #1cb3ce;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-card-1 > div:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+}
+
+.info-row label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+}
+
+.info-card-1 select {
+    margin-top: 8px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.info-card-1 select:focus {
+    outline: none;
+    border-color: #1cb3ce;
+    background-color: #fff;
+}
+
+/* ====== TEMPS ====== */
+
+.info-card-time {
+    background-color: #ffffff;
+    border: 2px solid #1cb3ce;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.info-card-time .info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-card-time label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+}
+
+.info-card-time input {
+    width: 60px;
+    padding: 6px 0px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+/* Progress bar */
+.progress-bar {
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 10px;
+    background-color: #e0e0e0;
+    border: none;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+}
+
+/* Texte progression */
+.info-card-time small {
+    display: block;
+    margin-top: 6px;
+    text-align: right;
+    font-size: 12px;
+    color: #555;
+}
+
+/* ====== CARTES CLASSIQUES (assignés, dates) ====== */
+
+.ticket-right .info-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.ticket-right .info-card h3 {
+    margin-top: 0;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.finish-detail{
+    font-size: 22px;
+    display: block;
+    width: fit-content;
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+    margin: auto;
+    padding: 30px 100px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+.finish-detail:hover{
+        transform: translateY(-2px);
+
+}
+
+/*=========================
+    TICKET creation form
+ =========================*/
+
+.new-ticket{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.inpage-new-ticket{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: max-content;
+    background: transparent;
+    align-items: center;
+    margin: 20px auto;
+
+}
+.new-ticket:target {
+    display: flex;
+    flex-direction: column;
+}
+.new-first-div{
+    background-color: white;
+    border-radius: 10px;
+    width: 500px;
+    text-align: center;
+    margin: 50px auto;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 50px;
+    max-height: 900px;
+    overflow-y: auto;
+}
+
+.new-ticket h1{
+    text-align: center;
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-family: 'Roboto', sans-serif;
+    margin: 20px auto;
+    width: fit-content;
+}
+.new-ticket-div{
+    margin: auto;
+    width: 100%;
+    font-size: 16px;
+}
+
+.new-ticket textarea, .new-ticket select, .title-input{
+    font-weight: bold;
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px;
+    outline: none;
+    border: none;
+    border-bottom: #535353 1px solid;
+}
+.new-ticket textarea:hover, .new-ticket select:hover, .title-input:hover{
+    border-bottom: #222222 1px solid;
+    transform: scale(1.02);
+}
+
+
+.new-ticket-label{
+
+    text-align: center;
+    color: #333;
+    font-size: 15px;
+    margin-bottom: 40px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+
+}
+
+.new-ticket button{
+    border-radius: 5px;
+    border:  none;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 30px;
+    display: inline-block;
+    min-width: 140px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+    color: white;
+    transition: transform 0.3s ease;
+}
+.new-ticket button:hover {
+    transform: translateY(-5px);
+}
+.div-button-ticket{
+    text-align: center;
+    width: 100%;
+}
+.ticket-fail{
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: transparent;
+    color: red;
+    border: red 2px solid;
+    border-radius: 5px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+.ticket-success{
+    padding: 15px;
+
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ticket-return{
+    padding: 15px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.hidden {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none; /* Empêche de cliquer dessus quand il est invisible */
+    /* Optionnel : si tu veux qu'il ne prenne plus de place du tout après l'anim */
+    /* display: none; -> Attention, nécessite un délai en JS */
+}
+
+/*=========================
+    LOGIN content
+ =========================*/
+.error-message {
+    color: #ff4d4d;       /* Rouge vif pour l'alerte */
+    font-size: 14px;    /* Un peu plus petit que le reste */
+    margin-top: 4px;      /* Petit espace sous l'input */
+}
+
+/* Optionnel : mettre l'input en rouge quand il y a une erreur */
+input.invalid {
+    border: 1px solid #ff4d4d !important;
+}
+.login-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  border: 1px solid #c2c2c2;
+  background-color: white;
+  box-shadow: 1px 1px 5px #919191;
+  z-index: 1000;
+  user-select: none;
+}
+
+.login-container > * {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 15px 0;
+  box-sizing: border-box;
+}
+
+.login-container > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Si vous avez des inputs */
+.login-container input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Si vous avez des boutons */
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.log-text{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgb(51, 51, 51);
+    font-family: 'Roboto', sans-serif;
+}
+#login-id, .login-id, #password, #login-id2 {
+
+    margin: 10px 0px;
+    padding:  10px  0;
+    text-align: left;
+    border: none;
+    outline: none;
+    border-bottom: #5b5b5b 1px solid;
+    font-size: 16px;
+}
+.div-other{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: auto;
+    padding: 10px 0;
+    text-align: center;
+
+}
+#login-logo{
+    width: 150px;
+    display: block;
+    margin-bottom: 20px;
+    margin: auto auto;
+}
+.other{
+    width: auto;
+    background-color: transparent;
+    border: none;
+    color: rgb(95, 95, 95);
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 11px;
+    text-decoration: none;
+    opacity: 0.8;
+}
+#div-login-button{
+    text-align: center;
+    width: 100%;
+}
+#login-button{
+    background-color: #ffffff;
+    border: none;
+    margin: auto;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/*=========================
+    settings content
+ =========================*/
+ .username-fail{
+    margin: 40px auto;
+    padding : 15px 30px;
+    width: fit-content;
+    display: block;
+    border-radius: 8px;
+    border: red 2px solid;
+    color: red;
+ }
+.settings-1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    margin: 0 50px;
+    box-shadow: 7px 5px 10px rgba(0,0,0, 0.2);
+}
+.settings-1:not(:last-of-type)
+{
+
+    margin-bottom: 40px;
+}
+.settings-2{
+    font-family: 'Roboto', sans-serif;
+    margin: 20px;
+    position: relative;
+
+}
+.settings-title{
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+.settings-img{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.settings-img img{
+    width: 200px;
+    max-width: 30%;
+}
+.settings-text{
+    font-size: 17px;
+    color: #555;
+    position: relative;
+}
+.settings{
+    text-align: center;
+    color: #333;
+    font-size: 32px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    border-bottom: #0066cc 2px solid;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 30px;
+    margin-bottom: 50px;
+}
+.settings-1 button{
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.photo-input{
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.container-photo{
+        margin: 10px 20px;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+.photo-fix{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0%;
+}
+.settings-1 button:hover, .photo-input:hover {
+    transform: translateY(-5px);
+}
+.settings-1 select{
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.settings-1 option{
+    color: black;
+}
+.settings-2 input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    border: none;
+}
+.settings-2 input:target{
+    display: block;
+    z-index: 1000;
+}
+/*=========================
+    Profile content
+ =========================*/
+.profile {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 20px;
+    flex-wrap: wrap; /* allow wrapping on small screens */
+}
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* left align content inside */
+    height: 100%;
+    background-color: #ffffff;
+    flex: 0 0 30%; /* fixed 30% width */
+    max-width: 30%;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    padding: 0 0;;
+    font-size: 30px;
+
+}
+.profile-header img {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 15px;
+}
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%; /* take remaining space */
+    min-width: 0; /* allow proper shrinking */
+}
+.profile-info{
+        font-family: 'Roboto', sans-serif;
+    width: 100%;
+    background-color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+        border-radius: 10px;
+}
+.profile-info h2 {
+    border-bottom: #0066cc 2px solid;
+    padding-bottom: 10px;
+    margin: 20px auto;
+    width: fit-content;
+    padding: 10px 30px;
+
+}
+.profile-cards h2 {
+    border-bottom: #0066cc 2px solid;
+    width: fit-content;
+    padding: 0;
+    padding-bottom: 7px;
+
+}
+.profile-cards{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+        font-family: 'Roboto', sans-serif;
+
+}
+.profile-cards div {
+    flex: 1 1 calc(50% - 10px); /* two cards per row with gap */
+    max-width: calc(50% - 10px);
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 15px;
+        font-family: 'Roboto', sans-serif;
+            background-color: #ffffff;
+
+
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 800px) {
+    .profile {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .profile-header {
+        flex: none;
+        max-width: none;
+        width: 100%;
+        align-items: center;
+    }
+    .profile-container {
+        width: 100%;
+    }
+    .profile-cards {
+        justify-content: center;
+    }
+    .profile-cards > div {
+        width: 100%;
+        max-width: 520px;
+    }
+}
+/*=========================
+    index content
+ =========================*/
+
+/* Hero Section */
+.hero {
+
+    padding: 80px 40px;
+    text-align: center;
+    min-height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content{
+    background: white;
+    padding: 40px 36px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    max-width: 1000px; /* align with project-table */
+    width: 100%;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    text-shadow: none;
+}
+
+.hero-content .subtitle {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 12px 0;
+    font-family: 'Roboto', sans-serif;
+    color: #5f8ed5;
+}
+
+.hero-content .hero-description {
+    font-size: 16px;
+    margin: 0 0 20px 0;
+    font-family: 'Roboto', sans-serif;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #666;
+    opacity: 1;
+}
+
+/* CTA Buttons */
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.error-date{
+    margin: 10px 5px;
+    font-size: 15px;
+    padding: 5px;
+    width: fit-content;
+}
+.btn {
+    display: inline-block;
+    padding: 14px 35px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    background-color: rgb(228, 53, 53);
+    color: white;
+    border: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+    color: white;
+    box-shadow: none;
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(28, 179, 206, 0.18);
+}
+
+/* hero-specific secondary to work on white card */
+.hero .btn-secondary, .btn-secondary {
+    background-color: transparent;
+    color: #5f8ed5;
+    border: 2px solid #5f8ed5;
+}
+
+.hero .btn-secondary:hover {
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+    color: white;
+    border: transparent 2px solid;
+}
+
+
+
+.btn-secondary:hover {
+    background-color: white;
+    color: #667eea;
+    transform: translateY(-2px);
+}
+
+/* Services Section */
+.services {
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+    margin: 0 50px;
+    padding: 80px 40px;
+    background-color: #f8f9fa;
+}
+
+.services h2 {
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 60px 0;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 22px;
+    color: #333;
+    margin: 20px 0;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+/* Why Us Section */
+.why-us {
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+    margin: 60px 50px;
+    padding: 80px 40px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.why-us h2 {
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 60px 0;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsif avec 4 max sinon a la ligne */
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    font-family: 'Roboto', sans-serif;
+}
+
+.feature h4 {
+    font-size: 20px;
+    color: #667eea;
+    margin: 0 0 15px 0;
+}
+
+.feature p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+@media (max-width: 1100px) {
+    /* Header */
+
+    header img, header a img {
+        max-width: 150px;
+        height: auto !important;
+    }
+    .headerNav {
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    .headerNav a {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+    .tickets-table {
+        max-width: 100vw ;
+        text-overflow: hidden;
+        table-layout: fixed;
+    }
+    .tickets-table th, .tickets-table td {
+        font-size: 12px;
+        padding: 5px;
+          word-wrap: break-word;
+
+    }
+    .new-first-div{
+        width: 90%;
+        padding: 20px 30px;
+    }
+        .ticket-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*=========================
+    TICKET DETAIL PAGE
+ =========================*/
+
+/*=========================
+    STYLES FOR <a> REPLACING BUTTONS
+ =========================*/
+
+/* Menu popup styles for <a> tags */
+.menu-popup a {
+    user-select: none;
+    background: none;
+    border: none;
+    padding: 20px 20px;
+    text-align: left;
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    text-decoration: none;
+}
+
+.menu-popup a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Project button table styles for <a> tags */
+.project-button td a {
+    font-size: 15px;
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+    margin: 30px auto;
+    padding: 20px 30px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    border-radius: 10px;
+    max-width: 600px;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.project-button td a:hover {
+    transform: translateY(-5px);
+}
+
+/* Add collaborator popup styles for <a> tags */
+#add-collab-popup .popup-content button {
+    font-size: 17px;
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+    margin: 30px auto;
+    padding: 10px 30px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    max-width: 600px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+#add-collab-popup .popup-content a {
+    font-size: 17px;
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+    margin: 30px auto;
+    padding: 10px 30px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    border-radius: 10px;
+    max-width: 600px;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    position: static;
+    top: auto;
+    right: auto;
+}
+
+#add-collab-popup .popup-content button:hover,
+#add-collab-popup .popup-content a:hover {
+    transform: translateY(-5px);
+}
+
+/* New ticket button styles for <a> tags */
+.div-new-ticket-button a {
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    padding: 5px 0;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* New ticket form styles for <a> tags */
+.new-ticket a:not([href="#!"]) {
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 30px;
+    display: inline-block;
+    min-width: 140px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+    color: white;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+
+
+/* Close link styling for <a href="#!"> - remains at top */
+.new-first-div a[href="#!"],
+#add-collab-popup .popup-content > div > a[href="#!"],
+.popup-content a[href="#!"] {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    color: #333 !important;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+}
+
+/* Login/Signup button styles for <a> tags */
+#login-button {
+    background-color: #ffffff;
+    border: none;
+    margin: auto;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Settings button styles for <a> tags */
+.settings-1 a {
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.settings-1 a:hover {
+    transform: translateY(-5px);
+}
+
+/* Other link styles (login/signup secondary links) */
+.other {
+    width: auto;
+    background-color: transparent;
+    border: none;
+    color: rgb(95, 95, 95);
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 11px;
+    text-decoration: none;
+    opacity: 0.8;
+    display: inline-block;
+}
+
+/* Board project styles for <a> tags */
+.board-project {
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    padding: 20px 25px;
+    margin: 0;
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+}
+
+/* Button add collaborator styles for <a> tags */
+.button-add-collab {
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.button-add-collab:hover {
+    transform: translateY(-5px);
+}
+
+/* Generic button styles for <a> tags */
+a.btn {
+    display: inline-block;
+    padding: 14px 35px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    border: none;
+}
+
+a.btn-primary {
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+    color: white;
+    box-shadow: none;
+}
+
+a.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(28, 179, 206, 0.18);
+}
+
+a.btn-secondary {
+    background-color: transparent;
+    color: #5f8ed5;
+    border: 2px solid #5f8ed5;
+}
+
+a.btn-secondary:hover {
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+    color: white;
+    border: transparent 2px solid;
+}
+
+a.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+a.btn-danger:hover {
+    background-color: #c82333;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(220, 53, 69, 0.18);
+}
+
+a.btn-small {
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+/* Profile button styling for <a> tags */
+.profile-button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+}
+
+/*=========================
+    STYLES FOR <a> REPLACING BUTTONS
+ =========================*/
+
+/* Menu popup styles for <a> tags */
+.menu-popup a {
+    user-select: none;
+    background: none;
+    border: none;
+    padding: 20px 20px;
+    text-align: left;
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    text-decoration: none;
+}
+
+.menu-popup a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Board project styles for <a> tags */
+.board-project {
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    padding: 20px 25px;
+    margin: 0;
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* Project button table styles for <a> tags */
+.project-button td a {
+    font-size: 15px;
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+    margin: 30px auto;
+    padding: 20px 30px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    border-radius: 10px;
+    max-width: 600px;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.project-button td a:not[href="#!"]:hover {
+    transform: translateY(-5px);
+}
+
+/* Add collaborator popup styles for <a> tags */
+#add-collab-popup a {
+    font-size: 17px;
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+    margin: 30px auto;
+    padding: 10px 30px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    border-radius: 10px;
+    max-width: 600px;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#add-collab-popup a:hover {
+    transform: translateY(-5px);
+}
+
+/* New ticket button styles for <a> tags */
+.div-new-ticket-button a {
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    padding: 5px 0;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* New ticket form styles for <a> tags */
+.new-ticket a:not([href="#!"]){
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 30px;
+    display: inline-block;
+    min-width: 140px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+    color: white;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.new-ticket a:not([href="#!"]):hover{
+    transform: translateY(-5px);
+}
+
+/* Login/Signup button styles for <a> tags */
+#login-button {
+    background-color: #ffffff;
+    border: none;
+    margin: auto;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Settings button styles for <a> tags */
+.settings-1 a {
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.settings-1 a:hover {
+    transform: translateY(-5px);
+}
+
+/* Other link styles (login/signup secondary links) */
+.other {
+    width: auto;
+    background-color: transparent;
+    border: none;
+    color: rgb(95, 95, 95);
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 11px;
+    text-decoration: none;
+    opacity: 0.8;
+    display: inline-block;
+}
+
+/* Button add collaborator styles for <a> tags */
+.button-add-collab {
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.button-add-collab:hover {
+    transform: translateY(-5px);
+}
+
+/* Generic button styles for <a> tags */
+a.btn {
+    display: inline-block;
+    padding: 14px 35px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    border: none;
+}
+
+a.btn-primary {
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+    color: white;
+    box-shadow: none;
+}
+
+a.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(28, 179, 206, 0.18);
+}
+
+a.btn-secondary {
+    background-color: transparent;
+    color: #5f8ed5;
+    border: 2px solid #5f8ed5;
+}
+
+a.btn-secondary:hover {
+    background: linear-gradient(135deg, #5f8ed5 0%, #1cb3ce 100%);
+    color: white;
+    border: transparent 2px solid;
+}
+
+a.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+a.btn-danger:hover {
+    background-color: #c82333;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(220, 53, 69, 0.18);
+}
+
+a.btn-small {
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+/* Close button styling for <a> tags in popups */
+.popup-content a[href="#!"] {
+    text-align: right;
+    color: #333;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+}
+
+/* Profile button styling for <a> tags */
+.profile-button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+}
