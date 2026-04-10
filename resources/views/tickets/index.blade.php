@@ -140,8 +140,8 @@
                     <div class="dropdown-filter">
                         <button type="button" class="dropdown-btn">▼</button>
                         <div class="dropdown-content" id="type-dropdown">
-                            <label><input type="checkbox" checked class="type-filter" value="Facturable"> Facturable</label>
-                            <label><input type="checkbox" checked class="type-filter" value="Inclus"> Inclus</label>
+                            <label><input type="checkbox" checked class="type-filter" value="billable"> Facturable</label>
+                            <label><input type="checkbox" checked class="type-filter" value="included"> Inclus</label>
                         </div>
                     </div>
                 </th>

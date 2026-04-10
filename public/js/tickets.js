@@ -101,7 +101,6 @@ if (table) {
       }
 
       let display = 0;
-      console.log(rowCells[2].textContent.trim() + "\n" + headerCheckboxes[2][0].value.toLowerCase() + "\n" + headerCheckboxes[2][0].checked);
       for (let j = 0; j < headerCheckboxes[2].length; j++) {
         if (rowCells[2].textContent.trim() === headerCheckboxes[2][j].value.toLowerCase() && headerCheckboxes[2][j].checked) {
           display += 1;
@@ -116,6 +115,8 @@ if (table) {
         break;
         }
     }
+
+    console.log(headerCheckboxes[4][0].value.toLowerCase());
 
     for (let j = 0; j < headerCheckboxes[4].length; j++) {
         if (rowCells[4].textContent.trim() === headerCheckboxes[4][j].value.toLowerCase() && headerCheckboxes[4][j].checked) {

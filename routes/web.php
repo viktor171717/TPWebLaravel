@@ -29,8 +29,8 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('projects', ProjectController::class);
 
-    Route::get('projects/{project}/contract/create', [ContractController::class, 'create'])
-        ->name('contracts.create');
+    Route::get('projects/{project}/contract/create', [ContractController::class, 'store'])
+        ->name('contracts.store');
     Route::put('contracts/{contract}', [ContractController::class, 'update'])
         ->name('contracts.update');
 });

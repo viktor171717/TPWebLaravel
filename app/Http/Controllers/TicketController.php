@@ -9,11 +9,7 @@ use Illuminate\Http\Request;
 
 class TicketController extends Controller
 {
-    public function apiIndex()
-    {
-        $tickets = Ticket::with(['project', 'assignedUser'])->get();
-        return response()->json($tickets);
-    }
+
     public function apiStore(Request $request)
     {
         $validated = $request->validate([
