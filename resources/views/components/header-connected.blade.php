@@ -5,9 +5,8 @@
         </a>
     </div>
     <nav class="headerNav">
-        <a href="{{ route('projects') }}">Mes projets</a>
-        <a href="{{ route('tickets') }}">Mes tickets</a>
-        <a href="{{ route('tickets.new') }}">Nouveau ticket</a>
+        <a href="{{ route('projects.index') }}">Mes projets</a>
+        <a href="{{ route('tickets.index') }}">Mes tickets</a>
         <a href="#menu-back" id="menu-toggle">☰</a>
     </nav>
 </header>

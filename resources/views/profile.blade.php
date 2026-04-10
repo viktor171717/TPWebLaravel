@@ -7,23 +7,22 @@
         <div class ="profile">
             <div class = profile-header>
                 <img src="{{ asset('images/profile.png') }}" alt="Profil">
-                <p>Jean Dupont</p>
+                <p>{{ $name }}</p>
             </div>
             <div class="profile-container">
                 <div class ="profile-info">
                     <h2>Informations du profil</h2>
-                    <p>Nom d'utilisateur : utilisateur123</p>
-                    <p>E-Mail : utilisateur123@example.com</p>
-                    <p>Rôle : utilisateur</p>
+                    <p>Nom d'utilisateur : {{ $name }}</p>
+                    <p>E-Mail : {{ $email }}</p>
                 </div>
                 <div class="profile-cards">
                     <div class="profile-projects">
                         <h2>Projets assignés</h2>
-                        <p>Projet A, Projet B</p>
+                        <p>{{ $projects->pluck('name')->implode(', ') }}</p>
                     </div>
                     <div class="profile-tickets">
                         <h2>Tickets créés</h2>
-                        <p>Ticket 1, Ticket 2</p>
+                        <p>{{ $tickets->pluck('title')->implode(', ') }}</p>
                     </div>
                 </div>
             </div>

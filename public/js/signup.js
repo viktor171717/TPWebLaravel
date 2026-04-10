@@ -42,6 +42,6 @@ document.getElementById('signup-form').addEventListener('submit', function(e) {
     });
 
     if (formIsValid) {
-        window.location.href = "{{ route('board') }}";
+        window.location.href = APP_URLS.board;
     }
 });

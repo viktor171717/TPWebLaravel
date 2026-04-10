@@ -63,7 +63,7 @@ input.addEventListener("input", () => {
 
 document.querySelector(".btn-danger").addEventListener("click", (e) => {
     e.preventDefault();
-    window.location.href = "tickets.html";
+    window.location.href = APP_URLS.tickets;
 });
 
 const dateInput = document.querySelector(".date-detail");
@@ -85,7 +85,7 @@ document.querySelector(".ticket-detail").addEventListener('submit', function (e)
     const type  = document.querySelector(".select-type").value;
     const time  = document.querySelector(".input-time").value;
     const date  = document.querySelector(".date-detail").value;
-            window.location.href = "{{ route('tickets') }}";
+            window.location.href = APP_URLS.tickets;
 
     }
     // console.log("state:", state);

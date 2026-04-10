@@ -5,17 +5,23 @@
 @section('content')
 <main>
     <div class="login-container">
-        <form class="">
+        <form action="{{ route('login.attempt') }}" method="POST" novalidate>
+            @csrf
             <img src="{{ asset('images/logo.png') }}" alt="logo" id="login-logo">
             <h1 class="log-text">Se connecter</h1>
+            @if ($errors->any())
+                <div class="error-message">{{ $errors->first() }}</div>
+            @endif
 
             <div>
-                <input placeholder="E-Mail" id="login-id">
+                <input type="email" name="email" value="{{ old('email') }}" placeholder="E-Mail" id="login-id" required>
+
                 <div class="error-message" id="email-error"></div>
+
             </div>
 
             <div>
-                <input type="password" placeholder="Mot de passe" id="password">
+                <input type="password" name="password" placeholder="Mot de passe" id="password" required>
                 <div class="error-message" id="password-error"></div>
             </div>
 
@@ -39,4 +45,3 @@
     </script>
     <script src="{{ asset('js/login.js') }}"></script>
 @endpush
-

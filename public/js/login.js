@@ -9,7 +9,6 @@ const emailError = document.getElementById('email-error');
 const passwordError = document.getElementById('password-error');
 loginForm.addEventListener('submit', (event) => {
     // 1. Empêcher le rechargement de la page
-    event.preventDefault();
 
     // 2. Réinitialiser les messages (on repart à zéro)
     emailError.innerText = "";
@@ -32,8 +31,8 @@ loginForm.addEventListener('submit', (event) => {
     }
 
     // 5. Finalisation
-    if (isValid) {
-        window.location.href = APP_URLS.board;
+    if (!isValid) {
+        event.preventDefault();
         // C'est ici que tu ferais ton appel fetch vers ton serveur
     }
 });

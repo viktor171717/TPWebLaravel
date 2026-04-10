@@ -92,7 +92,27 @@ header {
     transition: background-color 0.3s ease;
     font-family: 'Roboto', sans-serif;
 }
+.menu-popup a {
+    user-select: none;
+    background: none;
+    border: none;
+    padding: 20px 20px;
+    text-align: left;
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    display: block;
+    box-sizing: border-box;
+}
 .menu-popup button:hover {
+    background-color: #f0f0f0;
+}
+.menu-popup a:hover {
     background-color: #f0f0f0;
 }
 
@@ -660,6 +680,35 @@ body {
     align-items: center;
 }
 
+.ticket-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    width: 190px;
+}
+
+.ticket-actions > a,
+.ticket-actions > form {
+    width: 100%;
+}
+
+.ticket-actions .button-show,
+.ticket-actions .btn {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.ticket-actions .button-show {
+    margin-bottom: 0;
+}
+
+.ticket-actions .form-nul {
+    margin: 0;
+    padding: 0;
+}
+
 .ticket-id {
     color: #777;
 }
@@ -921,8 +970,7 @@ body {
     text-transform: uppercase;
 
 }
-
-.new-ticket button{
+.new-ticket-button{
     border-radius: 5px;
     border:  none;
     font-weight: bold;
@@ -936,7 +984,8 @@ body {
     color: white;
     transition: transform 0.3s ease;
 }
-.new-ticket button:hover {
+
+.new-ticket-button:hover {
     transform: translateY(-5px);
 }
 .div-button-ticket{
@@ -1400,6 +1449,7 @@ input.invalid {
     background-color: rgb(228, 53, 53);
     color: white;
     border: none;
+    width: max-content;
 }
 
 .btn-primary {
@@ -1806,7 +1856,6 @@ footer {
     transform: translateY(-5px);
 }
 
-/* Generic button styles for <a> tags */
 a.btn {
     display: inline-block;
     padding: 14px 35px;
@@ -1867,11 +1916,7 @@ a.btn-small {
     text-decoration: none;
 }
 
-/*=========================
-    STYLES FOR <a> REPLACING BUTTONS
- =========================*/
 
-/* Menu popup styles for <a> tags */
 .menu-popup a {
     user-select: none;
     background: none;
@@ -2121,4 +2166,108 @@ a.btn-small {
     align-items: center;
     width: 100%;
     text-decoration: none;
+}
+
+/*=========================
+    TICKET MODAL API
+ =========================*/
+.ticket-dialog {
+    border: none;
+    padding: 0;
+    background: transparent;
+}
+
+.ticket-dialog[open] {
+    max-width: none;
+    max-height: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.ticket-dialog h1 {
+    text-align: center;
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-family: 'Roboto', sans-serif;
+    margin: 20px auto;
+    width: fit-content;
+}
+
+.ticket-dialog .new-ticket-div {
+    margin: auto;
+    width: 100%;
+    font-size: 16px;
+}
+
+.ticket-dialog textarea,
+.ticket-dialog select,
+.ticket-dialog .title-input {
+    font-weight: bold;
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px;
+    outline: none;
+    border: none;
+    border-bottom: #535353 1px solid;
+}
+
+.ticket-dialog textarea:hover,
+.ticket-dialog select:hover,
+.ticket-dialog .title-input:hover {
+    border-bottom: #222222 1px solid;
+    transform: scale(1.02);
+}
+
+.ticket-dialog .new-ticket-label {
+    text-align: center;
+    color: #333;
+    font-size: 15px;
+    margin-bottom: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.ticket-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ticket-close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    min-width: auto;
+    color: #333;
+}
+
+
+.button-show {
+    text-decoration: none;
+    margin-bottom: 20px;
+
+    padding: 15px 20px;
+    display: inline-block;
+    padding: 14px 35px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    color: white;
+    border: none;
+}
+.form-nul{
+    padding: 0;
+
 }
